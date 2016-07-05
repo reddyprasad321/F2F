@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Form2Fridge</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content=" premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+
+<!-- CSS files start -->
+<link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<!-- JavaScript files end -->
+</head>
+<body> 
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="pageWrapper loginPageWrapper"> 
+    <!-- main menu outer wrapper starts -->
+    <div class="mainMenuOuterWrapper"> 
+      <!-- main menu wrapper starts -->
+       <ul class="mainMenuWrapper">
+        <li ><a href="categories.html">Home</a></li>
+         <li><a onclick='login()'>MyProfile</a></li>
+         <li><a href="register.html">Register</a></li>
+         <li><a href="contact.html">Contact</a></li>
+     <li class='onlyLoggedin'><a  id='LoginLogoutid' onClick='logout();'>LogOut</a></li>
+      </ul>
+      <a href='checkout.html' id='gotocheckout'></a>
+      <!-- main menu wrapper ends -->
+      <div class="mainMenuBottomDecoration"></div>
+    </div>
+   
+   <a href='checkout.html' id='gotocheckout'></a>
+       <a href="index.html" id='index'></a>
+      <a href='login.html' id='login'></a>
+      <a href='myprofile.html' id='myprofile'></a>
+      <a href='cotegories.html' id='cotegories'></a>
+      <a href="checkout.html" id='checkout'></a>
+      
+         <!-- main menu outer wrapper ends --> 
+    
+   <!-- shopping cart wrapper start -->
+    <form id="shoppingCartWrapper" class="shoppingCartWrapper "  action="checkout.html" method="post">
+      <fieldset>
+      <div class='ifProducts'>
+        <div class='mycart'></div>
+        
+        <!-- shopping cart info wrapper starts -->
+        <div class="shoppingCartInfoWrapper"> <span class="shoppingCartProductsNumber">Products:<span id='cartPCount'></span></span> <span class="shoppingCartProductsTotal">Total: Rs.<span id='cartTotalPrice'></span></span> </div>
+        <!-- shopping cart info wrapper ends -->
+        
+        <div class="shoppingCartButtonsWrapper"><a href="#" class="shoppingCartEmptyButton">Empty</a>
+          <input type="button" value="Checkout"  onClick='logincheck()' id="shoppingCartCheckoutButton" class="shoppingCartCheckoutButton"/>
+        </div>
+        </div>
+        
+        <div class='noProducts'>
+       <center>
+        <image src='images/content/empty-cart.png'>
+        <a href='categories.html' class='startShopping'>Start Shopping</a>
+          </center>
+        </div>
+      
+      </fieldset>
+    </form>
+
+    <!-- shopping cart wrapper ends -->
+     <!-- header outer wrapper starts -->
+    <div class="headerOuterWrapper">
+           <div class='f2fHeader f2fHeaderOther'>
+    <div class='innerf2fHeader'>
+    <div class='menu-icon'>
+    <a href='' class='mainMenuButtonProducts'>
+    <img src='images/content/menuicon.png'>
+    </a>
+    </div>
+    <span class='appName'>
+    Farm2Fridge
+    </span>
+    <span class='storeName' id='storename'></span>
+    <div class='cart-image'>
+    <a href='' class='shoppingCartButtonProducts cart_anchor' onClick="loadcart();">
+    <img src='images/content/cartimage.png'>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+     <!-- header outer wrapper ends -->
+  
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper"> 
+       
+      <div class="headerBreak headerBreakTitleBottom"></div>
+      
+      
+      
+      <!-- page title starts -->
+     <h3 class="pageTitle">CHECKOUT</h3>
+      <!-- page title ends -->
+      
+       <!-- register form wrapper starts -->
+      <div class="registerFormWrapper">
+        <form action="#" method="post" id="registerForm" class="registerForm">
+          <fieldset>
+            <div class="formFieldWrapper">
+              
+              <input type="text" value="" id="registerFirstNameField" placeholder='Name' class="fields checkout"	name="registerFirstNameField" />
+            </div>
+           <div class="formFieldWrapper">
+              
+              <input type="text" value="" id="registerPhoneField" class="fields checkout" placeholder='Mobile Number' name="registerPhoneField" />
+            </div>
+           
+            <div class="formFieldWrapper">
+            
+              <input type="text" value="" id="registerEmailField" class="fields checkout"placeholder='Email' name="registerEmailField" />
+            </div>
+            <div class="formFieldWrapper">
+              
+              <textarea  id="registerAddressField" style='color:#756d6d !important' placeholder='Address' class="textarea checkout" name="address " ></textarea>
+            </div>
+            <div class="formFieldWrapper">
+             
+              <textarea  id="DeliveryAddress" style='color:#756d6d !important' placeholder='Delivery Address' class="textarea checkout" name="DeliveryAddress" ></textarea>
+            </div>
+            
+            <div class="formFieldWrapper">
+              
+              <select  value="" id="DeliverLocation" onchange="Intimation()" class="select" name="registerZipField" disabled ></select>
+            </div>
+             
+          </fieldset>
+        </form>
+      </div>
+      <!-- register form wrapper ends -->
+      <div class="headerBreak headerBreakTitleBottom"></div>
+      
+      <!-- checkout form starts -->
+      <form id="checkoutForm" class="checkoutForm" action="success.html" method="post">
+      <fieldset>
+       <div class='mycart'></div>
+      
+        
+        <!-- checkout info wrapper starts -->
+        <div class="checkoutInfoWrapper"> <span class="checkoutProductsNumber">Products: <span id='checkoutPCount'>0</span></span> <span class="checkoutProductsTotal">Total: RS <span id='CheckoutTotalPrice'>0</span></span></span> </div>
+        <!-- checkout info wrapper ends -->
+        
+        <div class="checkoutButtonsWrapper">
+          <input type="button" onclick='saveOrder()' value="Place Order" id="checkoutCheckoutButton" class="checkoutCheckoutButton"/>
+        </div>
+      </fieldset>
+    </form>
+      <!-- checkout form ends -->
+    </div>
+    <!-- page content wrapper ends -->
+    <br>
+    <div class="footerDecoration"></div>
+    <!-- footer wrapper starts -->
+    <div class="footerWrapper">  </div>
+    <!-- footer wrapper ends --> 
+    
+  </div>
+  <!-- page wrapper ends --> 
+</div>
+<!-- website wrapper ends -->
+
+<script type="text/javascript" src="js/mycart.js"></script>
+<script>
+
+var string = '';
+
+$.ajax({
+
+			type : "post",
+			url : "http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/get_cities",
+			success : function(response) {
+
+				var data = jQuery.parseJSON(response);
+
+				string +='<option value=" "> select Delivery Area</option>'
+
+				
+				for (i = 0; i < data.length; i++) {
+					
+				
+					if(window.localStorage.getItem('DeliverLocation') == data[i]["aid"] ){
+						
+						string += '<option value='+data[i]["aid"]+' selected>'
+						+ data[i]["areaname"] + '</option>'
+						
+					}else{
+
+					string += '<option value='+data[i]["aid"]+'>'
+							+ data[i]["areaname"] + '</option>'
+					}
+
+				}
+				string += '</select>';
+				//console.log(string);
+				$('#DeliverLocation').html(string);
+
+			}
+
+		});
+
+
+
+
+document.getElementById("registerFirstNameField").value = window.localStorage.getItem('firstname');
+document.getElementById("registerPhoneField").value = window.localStorage.getItem('phonenumber');
+document.getElementById("registerAddressField").value = window.localStorage.getItem('address');
+document.getElementById("DeliveryAddress").value = window.localStorage.getItem('DeliveryAddress');
+document.getElementById("registerEmailField").value = window.localStorage.getItem('user_email');
+
+function saveOrder(){
+	
+	
+	
+	
+	var cartTotal=window.localStorage.getItem("cartTotal"); 
+	var  cartProducts=jQuery.parseJSON(window.localStorage.getItem("cart")); 
+	var cartQuantities=jQuery.parseJSON(window.localStorage.getItem("cartquantities"));
+	
+	var firstname 		= $('#registerFirstNameField').val();
+	var phonenumber 	= $('#registerPhoneField').val();
+	var address 		= $('#registerAddressField').val();
+	var DeliveryAddress = $('#DeliveryAddress').val();
+	var DeliverLocation = $('#DeliverLocation').val();
+	var user_email 		= $('#registerEmailField').val();
+	var CustomerId		= window.localStorage.getItem('user_id');
+	var TotalPrice		= 1325;
+	var StoreId         = window.localStorage.getItem('storeid');
+	console.dir(cartProducts);
+	console.dir(cartQuantities);
+	
+	$.ajax({
+		
+		type:'post',
+		data:{'CustomerId':CustomerId,'StoreId':StoreId,'TotalPrice':cartTotal,'DelivAddr':DeliveryAddress,
+				'BillingAddr':address,'DelvAreaId':DeliverLocation,'DelvAddrlandmark':DeliveryAddress,'CustName':firstname,'CustPhone':phonenumber,
+				'CustEmail':user_email,'Produts':cartProducts,'cartQuantities':cartQuantities},
+		url:"http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/save_Order_Userapp",
+		success:function(response){
+			window.localStorage.removeItem("cartTotal");
+			window.localStorage.removeItem("cart");
+			window.localStorage.removeItem("cartquantities");
+			document.open();
+			document.write(response);
+			document.close(); 
+			
+		}
+		
+	});
+	
+}
+
+/* function saveOrder(){
+	
+	var firstname 		= $('#registerFirstNameField').val();
+	var phonenumber 	= $('#registerPhoneField').val();
+	var address 		= $('#registerAddressField').val();
+	var DeliveryAddress = $('#DeliveryAddress').val();
+	var DeliverLocation = $('#DeliverLocation').val();
+	var CustomerId		= window.localStorage.getItem('user_id');
+	var TotalPrice		= 1325;
+	var StoreId         = window.localStorage.getItem('storeid');
+	
+	
+	
+	var products 		= [
+	             		     { "ProductId": "1", "UnitPrice": "212" ,"Quantity" :"1.5","UnitMeasurement":"kg"},
+	             		    { "ProductId": "2", "UnitPrice": "21" ,"Quantity" :"1","UnitMeasurement":"kg"},
+	             		   { "ProductId": "3", "UnitPrice": "2" ,"Quantity" :"2","UnitMeasurement":"kg"},
+	             		  { "ProductId": "30", "UnitPrice": "22" ,"Quantity" :"1","UnitMeasurement":"kg"}
+	             		    
+	             		 ];
+	
+	
+	//console.log(products);return;
+	
+	$.ajax({
+		
+		type:'post',
+		data:{'CustomerId':CustomerId,'StoreId':StoreId,'TotalPrice':TotalPrice,'DelivAddr':DeliveryAddress,
+				'BillingAddr':address,'DelvAreaId':DeliverLocation,'DelvAddrlandmark':DeliveryAddress,
+				'Produts':products},
+		url:"http://localhost:1234/phplab/f2FApp/form2fridze/index.php/Farm2Fridze/Order_Finish",
+		success:function(response){
+			
+			alert(response);
+		}
+		
+	});
+	
+} */
+
+
+
+window.load=checkoutcart();
+</script>
+
+</body>
+
+
+</html>

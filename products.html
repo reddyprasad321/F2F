@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Farm2Fridge</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="shopey, premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- CSS files start -->
+<link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/sliderStyle.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+
+<!-- Latest compiled and minified JavaScript -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+ <script type="text/javascript" src="js/sliderJs.js"></script>
+<script type="text/javascript" src="js/codex-fly.js"></script>
+
+<!-- JavaScript files end -->
+</head>
+<body style="margin-top:0px;">
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="homePageWrapper"> 
+    <!-- main menu outer wrapper starts -->
+    <div class="mainMenuOuterWrapper"> 
+      <!-- main menu wrapper starts -->
+      <ul class="mainMenuWrapper">
+        <li><a href="categories.html">Home</a></li>
+         <li><a onclick='login()'>MyProfile</a></li>
+         <li><a href="register.html">Register</a></li>
+         <li><a href="contact.html">Contact</a></li>
+         <li class='onlyLoggedin'><a   onClick='logout(event);'>LogOut</a></li>
+      </ul>
+<a id='LoginLogoutid'></a>
+      <a href='checkout.html' id='gotocheckout'></a>
+       <a href="index.html" id='index'></a>
+      <a href='login.html' id='login'></a>
+      <a href='myprofile.html' id='myprofile'></a>
+      <a href='cotegories.html' id='cotegories'></a>
+      <a href="checkout.html" id='checkout'></a>
+      <!-- main menu wrapper ends -->
+      <div class="mainMenuBottomDecoration"></div>
+    </div>
+    <!-- main menu outer wrapper ends --> 
+    
+    <!-- shopping cart wrapper start -->
+    <form id="shoppingCartWrapper" class="shoppingCartWrapper "  action="checkout.html" method="post">
+      <fieldset>
+      <div class='ifProducts'>
+        <div class='mycart'></div>
+        
+        <!-- shopping cart info wrapper starts -->
+        <div class="shoppingCartInfoWrapper"> <span class="shoppingCartProductsNumber">Products:<span id='cartPCount'></span></span> <span class="shoppingCartProductsTotal">Total: Rs.<span id='cartTotalPrice'></span></span> </div>
+        <!-- shopping cart info wrapper ends -->
+        
+        <div class="shoppingCartButtonsWrapper"><a href="#" class="shoppingCartEmptyButton">Empty</a>
+          <input type="button" value="Checkout"  onClick='logincheck()' id="shoppingCartCheckoutButton" class="shoppingCartCheckoutButton"/>
+        </div>
+        </div>
+        
+        <div class='noProducts'>
+       <center>
+        <image src='images/content/empty-cart.png'>
+        <a href='categories.html' class='startShopping'>Start Shopping</a>
+          </center>
+        </div>
+      
+      </fieldset>
+    </form>
+
+    <!-- shopping cart wrapper ends --></div></div>
+   
+  
+ <div class="sliderAndMenu">     
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height:1000px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <!-- <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div> -->
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width:1300px; height:1000px; overflow: hidden;">
+            <div  style="display: none;">
+                <img data-u="image" data-hai='hai' src="images/sliderImages/slideBanner.png" height='800px'/>
+            </div>
+             <div  data-po="80% 55%" style="display:none;">
+                <img data-u="image" src="images/sliderImages/slider_freedelvry.png" />
+            </div>
+             <div  data-po="80% 55%" style="display:none;">
+                <img data-u="image" src="images/sliderImages/slider_fruits.png" />
+            </div>
+            <div  style="display: none;">
+                <img data-u="image" src="images/sliderImages/slider_gorcery.png" />
+            </div>
+            <div  data-po="80% 55%" style="display:none;">
+                <img data-u="image" src="images/sliderImages/slider_vegitables.png" />
+            </div>
+             
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+     
+    </div>
+         <div class='f2fHeader mytoggle'>
+    <div class='innerf2fHeader'>
+    <div class='menu-icon'>
+    <a href='' class='mainMenuButtonProducts'>
+    <img src='images/content/menuicon.png'>
+    </a>
+    </div>
+    <span class='appName'>
+    Farm2Fridge
+    </span>
+    <span class='storeName' id='storename'></span>
+    <div class='cart-image'>
+    <a href='' class='shoppingCartButtonProducts cart_anchor' onClick="loadcart();">
+    <img src='images/content/cartimage.png'>
+    </a>
+    </div>
+    </div>
+    </div>
+    <div>
+   
+   
+ 
+  <!--   <div class='AfterSlider'>
+    <span class='AfterSliderMenu'></span>
+    </div> -->
+    <!-- page content wrapper starts -->
+    
+    <div class="pageContentWrapper"> 
+     
+      
+      <div class="textBreakBottom"></div>
+      
+      <!-- new products start -->
+     
+	 <!--Products starts-->
+      <div class="homeProductsWrapper">
+     
+	  <span class='shop_items'></span>
+	  <!-- Products will append to this span tag !important -->
+
+      </div>
+      <!-- new products end -->
+    
+      <audio controls style='display:none' id='audio'>
+      <source src="audio/addtocart.mp3" type="audio/mpeg">
+	  </audio>
+     
+      
+     
+      </div>
+      <!-- accordion wrapper ends --> 
+      
+    </div>
+    <!-- page content wrapper ends -->
+    
+
+    <!-- footer wrapper starts -->
+    <div class="footerWrapper"> </div>
+    <!-- footer wrapper ends --> 
+    
+  </div>
+  <!-- page wrapper ends --> 
+</div>
+<!-- website wrapper ends -->
+
+
+<script type="text/javascript" src="js/mycart.js"></script>
+<script>
+window.load=getProducts();
+$( document ).ready(function() {
+	var store = window.localStorage.getItem('storename');
+	var string = "<span class='storeName'>"+store+"</span>" ;
+	
+	$('#storename').html(store);
+	
+});
+
+
+</script>
+</body>
+
+
+</html>
+
+
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Farm2Fridge</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content=" premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+
+<!-- CSS files start -->
+<link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<!-- JavaScript files end -->
+</head>
+<body>
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="pageWrapper contactPageWrapper"> 
+    <!-- main menu outer wrapper starts -->
+    <div class="mainMenuOuterWrapper"> 
+      <!-- main menu wrapper starts -->
+     <ul class="mainMenuWrapper">
+        <li ><a href="categories.html">Home</a></li>
+        <li><a onclick='login()'>MyProfile</a></li>
+         <li><a href="register.html">Register</a></li>
+         <li><a href="contact.html">Contact</a></li>
+        <li class='onlyLoggedin'><a  id='LoginLogoutid' onClick='logout();'>LogOut</a></li>
+      </ul>
+      <!-- main menu wrapper ends -->
+      <div class="mainMenuBottomDecoration"></div>
+    </div>
+     <a href="" id='redirect'></a>
+    <a href='checkout.html' id='gotocheckout'></a>
+       <a href="index.html" id='index'></a>
+      <a href='login.html' id='login'></a>
+      <a href='myprofile.html' id='myprofile'></a>
+      <a href='cotegories.html' id='cotegories'></a>
+      <a href="checkout.html" id='checkout'></a>
+    <!-- main menu outer wrapper ends --> 
+    
+  <!-- shopping cart wrapper start -->
+    <form id="shoppingCartWrapper" class="shoppingCartWrapper "  action="checkout.html" method="post">
+      <fieldset>
+      <div class='ifProducts'>
+        <div class='mycart'></div>
+        
+        <!-- shopping cart info wrapper starts -->
+        <div class="shoppingCartInfoWrapper"> <span class="shoppingCartProductsNumber">Products:<span id='cartPCount'></span></span> <span class="shoppingCartProductsTotal">Total: Rs.<span id='cartTotalPrice'></span></span> </div>
+        <!-- shopping cart info wrapper ends -->
+        
+        <div class="shoppingCartButtonsWrapper"><a href="#" class="shoppingCartEmptyButton">Empty</a>
+          <input type="button" value="Checkout"  onClick='logincheck()' id="shoppingCartCheckoutButton" class="shoppingCartCheckoutButton"/>
+        </div>
+        </div>
+        
+        <div class='noProducts'>
+       <center>
+        <image src='images/content/empty-cart.png'>
+        <a href='categories.html' class='startShopping'>Start Shopping</a>
+          </center>
+        </div>
+      
+      </fieldset>
+    </form>
+
+    <!-- shopping cart wrapper ends -->
+    
+   <!-- header outer wrapper starts -->
+    <div class="headerOuterWrapper">
+           <div class='f2fHeader f2fHeaderOther'>
+    <div class='innerf2fHeader'>
+    <div class='menu-icon'>
+    <a href='' class='mainMenuButtonProducts'>
+    <img src='images/content/menuicon.png'>
+    </a>
+    </div>
+    <span class='appName'>
+    Farm2Fridge
+    </span>
+    <span class='storeName' id='storename'></span>
+    <div class='cart-image'>
+    <a href='' class='shoppingCartButtonProducts cart_anchor' onClick="loadcart();">
+    <img src='images/content/cartimage.png'>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+     <!-- header outer wrapper ends -->
+    
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper"> 
+     
+      
+      <div class="textBreakBottom"></div>
+      
+      <!-- map starts -->
+      
+      <!-- contact form wrapper starts -->
+      <div class="contactFormWrapper">
+        <h4 class="contactTitle">Cantact Us :</h4>
+        <!-- form success message wrapper starts -->
+        <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
+          <h4>Your message was received!</h4>
+          <p>Your message was successfully submitted to us, and we will contact you as soon as possible.</p>
+        </div>
+        <!-- form success message wrapper ends --> 
+        <!-- contact form starts -->
+        <form action="#" method="post" class="contactForm" id="contactForm">
+          <fieldset>
+            <div class="formFieldWrapper">
+              <label for="contactNameField">Name:</label>
+              <input type="text" name="contactNameField" value="" class="contactField fieldWithIcon userFieldIcon requiredField" id="contactNameField" data-placeholder=""/>
+            </div>
+            <div class="formFieldWrapper">
+              <label for="contactEmailField">Email:</label>
+              <input type="text" name="contactEmailField" value="" class="contactField fieldWithIcon emailFieldIcon requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+            </div>
+            <div class="formTextareaWrapper">
+              <label for="contactMessageTextarea">Message:</label>
+              <textarea name="contactMessageTextarea" class="contactTextarea  textareaWithIcon messageFieldIcon requiredField" id="contactMessageTextarea" data-placeholder=""></textarea>
+            </div>
+            <div class="formSubmitButtonErrorsWrapper"> 
+              <!-- form errors start --> 
+              <span class="formValidationError" id="contactNameFieldError">Your name is required.</span> <span class="formValidationError" id="contactEmailFieldError">Your email is required.</span> <span class="formValidationError" id="contactEmailFieldError2">Invalid email address.</span> <span class="formValidationError" id="contactMessageTextareaError">A message is required.</span> 
+              <!-- form errors end -->
+              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Submit" data-form-id="contactForm"/>
+            </div><br/><br/>
+            <div class="contactMapWrapper">
+        <h4 class="contactTitle mapTitle">We Are Here:</h4>
+       <!--  <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ro&amp;geocode=&amp;q=Envato+Pty+Ltd,+Elizabeth+Street,+Victoria,+Australia&amp;aq=0&amp;oq=envato&amp;ie=UTF8&amp;hq=Envato+Pty+Ltd,+Elizabeth+Street,+Victoria,+Australia&amp;ll=-37.817941,144.964977&amp;spn=0.017629,0.032015&amp;t=m&amp;output=embed" class="contactMap"></iframe>
+       -->
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121740.06284259734!2d78.50132178892908!3d17.53723033849163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb84ad48255d29%3A0x410841a999b3433!2sSecunderabad%2C+Telangana!5e0!3m2!1sen!2sin!4v1467121506983" width="800" height="600" frameborder="0" style="border:0" allowfullscreen class="contactMap"></iframe>
+       </div>
+      <!-- map ends -->
+      
+      <div class="pageBreak"></div>
+      
+      <!-- social icons wrapper starts -->
+      <div class="socialIconsWrapper"> <a href="#" class="socialIcon socialIconFacebookDark"></a> <a href="#" class="socialIcon socialIconRssDark"></a> <a href="#" class="socialIcon socialIconTwitterDark"></a> 
+        <!--<a href="#" class="socialIcon socialIconDribbbleDark"></a> <a href="#" class="socialIcon socialIconVimeoDark"></a>
+      <a href="#" class="socialIcon socialIconSkypeDark"></a>--> </div>
+      <!-- social icons wrapper ends -->
+      
+      <div class="textBreakBottom"></div>
+      
+            <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />
+          </fieldset>
+        </form>
+        <!-- contact form ends --> 
+      </div>
+      <!-- contact form wrapper ends --> 
+    </div>
+    <!-- page content wrapper ends -->
+    
+    <div class="footerDecoration"></div>
+    <!-- footer wrapper starts -->
+    <div class="footerWrapper"></div>
+    <!-- footer wrapper ends --> 
+    
+  </div>
+  <!-- page wrapper ends --> 
+</div>
+<!-- website wrapper ends -->
+
+<script>
+
+$( document ).ready(function() {
+	var store = window.localStorage.getItem('storename');
+	var string = "<span class='storeName'>"+store+"</span>" ;
+	
+
+	$('#storename').html(store);
+});
+
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Farm2Fridge</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content=" premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+
+<!-- CSS files start -->
+<link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+<!-- JavaScript files end -->
+
+
+<style>
+html
+{
+height:100%;
+}
+body{
+
+  background:url("images/bg3.png") no-repeat center center fixed;
+  
+ background-size: 100% 100%;
+ 
+/*  background-color:rgb(146,218,146); */
+
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.store-shopnow{
+
+/* margin:0 auto;
+display:table;
+margin-top: 10%;
+
+        background-color:rgba(165, 145, 106, 0.05);
+    padding:40px 20px  30px 10px;
+    */
+
+      position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-top: -50px;
+    margin-left: -50px;
+   
+
+}
+.store select{
+
+width:250px;
+font-size:16px;
+border-radius:3px;
+    text-align: center;
+}
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    background:none !important;
+     border: none !important;
+    border-bottom:2px solid #cdc200 !important;
+     color:#999999 !important;
+      background-color:hsla(101,95%,15%,0.1) !important;
+  
+}
+.gorightcorner{
+position:absolute;
+font-size:25px;
+right:8px;
+top:7px;
+}
+.option-store{
+height:40px !important;
+padding:10px !important;
+margin:10px;
+}
+.shop-now a:hover{
+text-decoration:none !important;
+}
+.shop-now a{
+padding:5px;
+/* background:#e4755a; */
+    background: #117d64;
+width:100px;
+border-radius:3px;
+font-size:13px;
+color:white;
+}
+</style>
+</head>
+<body>
+
+<!-- <div style='margin-top:15%;margin-left:40%;'>
+<img alt="" src="images/content/logo.png">
+</div -->>
+
+<div class='store-shopnow'>
+<div id='alert'></div>
+<center>
+<div class='store'>
+<select id='stores' onchange='store()'>
+
+</select>
+<i class="fa fa-angle-down gorightcorner" aria-hidden="true"></i>
+</div>
+</center>
+<center>
+<div class='shop-now'>
+<a href='login.html' onclick='return check()'>shop now</a></div>
+</center>
+
+</div>
+
+<!-- <div style='margin-top:15%;margin-left:40%;'>
+<img alt="" src="images/content/logo.png">
+</div> -->
+
+
+<script>
+
+$(document).ready(function(){
+	
+	var string = '<option value="">-----------Select Store------------</option>';
+    
+	$.ajax({
+		
+		type:'post',
+		url:"http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/get_stores",
+		success : function(response){
+			
+			
+			var data = jQuery.parseJSON(response);
+			for (i = 0; i < data.length; i++) {
+
+				string += '<option value='+data[i]["StoreId"]+'>'
+						+ data[i]["StoreName"] + '</option>'
+
+			}
+			string += '</select>';
+			
+			$('#stores').html(string);
+		}
+	});
+});
+
+
+function store(){
+	
+	var storeid = $('#stores').val();
+	var storename = $("#stores option:selected").text();
+	
+	window.localStorage.setItem('storename',storename);
+	window.localStorage.setItem('storeid',storeid);
+		
+}
+
+function check(){
+	
+	
+	if($('#stores').val() == ''){
+		
+		$('#alert').html('<p style="color:red">Please Select Near By Store</p>');
+		return false;
+		
+	}
+	else{
+		
+		return true;
+	}
+}
+</script>
+</body>
+</html>

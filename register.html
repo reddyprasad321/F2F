@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Farm2Fridge</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content=" premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+
+<!-- CSS files start -->
+<link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript" src="js/mycart.js"></script>
+<!-- JavaScript files end -->
+</head>
+<body> 
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="pageWrapper registerPageWrapper"> 
+    <!-- main menu outer wrapper starts -->
+    <div class="mainMenuOuterWrapper"> 
+      <!-- main menu wrapper starts -->
+      <ul class="mainMenuWrapper">
+        <li ><a href="categories.html">Home</a></li>
+         <li><a onclick='login()'>MyProfile</a></li>
+         <li><a href="register.html">Register</a></li>
+         <li><a href="contact.html">Contact</a></li>
+       <li class='onlyLoggedin'><a  id='LoginLogoutid' onClick='logout();'>LogOut</a></li>
+      </ul>
+      <!-- main menu wrapper ends -->
+      <div class="mainMenuBottomDecoration"></div>
+    </div>
+     <a href="" id='redirect'></a>
+      <a href='checkout.html' id='gotocheckout'></a>
+       <a href="index.html" id='index'></a>
+      <a href='login.html' id='login'></a>
+      <a href='myprofile.html' id='myprofile'></a>
+      <a href='cotegories.html' id='cotegories'></a>
+      <a href="checkout.html" id='checkout'></a>
+      
+      
+          <!-- main menu outer wrapper ends --> 
+    
+   <!-- shopping cart wrapper start -->
+    <form id="shoppingCartWrapper" class="shoppingCartWrapper "  action="checkout.html" method="post">
+      <fieldset>
+      <div class='ifProducts'>
+        <div class='mycart'></div>
+        
+        <!-- shopping cart info wrapper starts -->
+        <div class="shoppingCartInfoWrapper"> <span class="shoppingCartProductsNumber">Products:<span id='cartPCount'></span></span> <span class="shoppingCartProductsTotal">Total: Rs.<span id='cartTotalPrice'></span></span> </div>
+        <!-- shopping cart info wrapper ends -->
+        
+        <div class="shoppingCartButtonsWrapper"><a href="#" class="shoppingCartEmptyButton">Empty</a>
+          <input type="button" value="Checkout"  onClick='logincheck()' id="shoppingCartCheckoutButton" class="shoppingCartCheckoutButton"/>
+        </div>
+        </div>
+        
+        <div class='noProducts'>
+       <center>
+        <image src='images/content/empty-cart.png'>
+        <a href='categories.html' class='startShopping'>Start Shopping</a>
+          </center>
+        </div>
+      
+      </fieldset>
+    </form>
+
+    <!-- shopping cart wrapper ends -->
+        
+       
+    
+ <!-- header outer wrapper starts -->
+    <div class="headerOuterWrapper">
+           <div class='f2fHeader f2fHeaderOther'>
+    <div class='innerf2fHeader'>
+    <div class='menu-icon'>
+    <a href='' class='mainMenuButtonProducts'>
+    <img src='images/content/menuicon.png'>
+    </a>
+    </div>
+    <span class='appName'>
+    Farm2Fridge
+    </span>
+    <span class='storeName' id='storename'></span>
+    <div class='cart-image'>
+    <a href='' class='shoppingCartButtonProducts cart_anchor' onClick="loadcart();">
+    <img src='images/content/cartimage.png'>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+     <!-- header outer wrapper ends -->
+    
+    <!-- page content wrapper starts -->
+   
+       <!-- page title starts -->
+       
+       
+
+       <a class='skip' href='#'>Register Here</a><br>
+    
+      
+      <div id='failed'></div>
+      <!-- page title ends -->
+       <!-- register form wrapper starts -->
+     
+        <div class='name'></div>
+         
+            <div class="formFieldWrapper">
+              <input type="text" value="" id="registerFirstNameField" placeholder='Name'  class="fields border "	name="firstname" />
+            </div>
+           <div class='phone'></div>
+            <div id='Notavail'></div>
+           <div class="formFieldWrapper">
+             
+              <input type="text" value="" id="registerPhoneField" onchange='getavail()' placeholder='Mobile Number'  class="fields " name="registerPhoneField" />
+            </div>
+            
+            <div class='pwd'></div>
+            <div class="formFieldWrapper">
+              
+              <input type="password" value="" id="registerPasswordField"  class="fields" placeholder='Password' name="registerPasswordField" />
+            </div>
+             
+               <div class='email'></div>
+            <div class="formFieldWrapper">
+           
+              <input type="text" value="" id="registerEmailField"  class="fields" placeholder='Email' name="registerEmailField" />
+            </div>
+           
+            <div class='address'></div>
+            <div class="formFieldWrapper">
+              
+              <textarea  id="registerAddressField"  class="textarea " name="address" rows='10' placeholder='Address' cols='20'></textarea>
+            </div>
+            
+            <div class='daddress'></div>
+            <div class="formFieldWrapper">
+            
+              <textarea  id="DeliveryAddress" placeholder='Delivery Address' class="textarea" name="DeliveryAddress" ></textarea>
+            </div>
+             
+             <div class='dlocation'></div>
+            <div class="formFieldWrapper">
+             
+              <select  value="" id="DeliverLocation" class="select" name="registerZipField" ></select>
+            </div>
+             
+             
+             <div class="formFieldWrapper">
+             
+              <button  value="" onclick='saveUsers()' id="registerButton"  value='Sign In'   class="button-big" name="loginNameField" >Register</button>
+            </div>
+            
+            <div class="signup"> <a href="login.html" class="registerLoginButton">Login</a> <a href="recover.html" class="registerRecoverButton">Recover</a>
+             
+            </div>
+         
+      </div>
+      <!-- register form wrapper ends -->
+      
+       <div class="footerDecoration"></div>
+    <!-- footer wrapper starts -->
+    <div class="footerWrapper">  </div>
+    <!-- footer wrapper ends --> 
+  
+      
+      <a href='products.html' id='prducts'></a>
+    </div>
+    <!-- page content wrapper ends -->
+    
+    
+<!-- website wrapper ends -->
+
+
+<style>
+body{
+
+ /*  background:url("images/bg3.png") no-repeat center center fixed; ; */
+/*  background-size: 80px 600px; */ 
+ 
+/*  background-color:rgb(146,218,146); */
+
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+<script>
+
+
+var string = '';
+
+$.ajax({
+
+			type : "post",
+			url : "http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/get_cities",
+			success : function(response) {
+
+				var data = jQuery.parseJSON(response);
+
+				string +='<option value=" "> select Delivery Area</option>'
+
+				for (i = 0; i < data.length; i++) {
+
+					string += '<option value='+data[i]["aid"]+'>'
+							+ data[i]["areaname"] + '</option>'
+
+				}
+				string += '</select>';
+				//console.log(string);
+				$('#DeliverLocation').html(string);
+
+			}
+
+		});
+
+function getavail() {
+
+	var Uname = $('#registerPhoneField').val();
+	
+	
+	
+	if(Uname == '' || Uname.length !=10){
+		
+		document.getElementById("registerPhoneField").value = '';
+		$('#Notavail').html('<p style="color:red">Please Provie Valid Mobile Number</p>');
+		
+	}
+
+	
+	$.ajax({
+
+				type : 'post',
+				data : {
+					'Username' : Uname
+				},
+				url : "http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/check_avail",
+				success : function(response) {
+
+					var status = jQuery.parseJSON(response);
+
+					if (status == 'Taken') {
+
+						document.getElementById("registerPhoneField").value = '';
+						$('#Notavail').html('<p style="color:red">Mobile Number Already Exist Please select Another</p>');
+						
+					}
+
+				}
+			});
+
+}
+
+function saveUsers(){
+	
+	if($('#registerFirstNameField').val() == ''){
+		
+		$('.name').html('<p style="color:red">Enter Name</p>');
+	}else if($('#registerPhoneField').val() == ''){
+		
+		$('.phone').html('<p style="color:red">EnterMobile Number</p>');
+	}else if($('#registerAddressField').val() == ''){
+		
+		$('.address').html('<p style="color:red">Enter Address</p>');
+	}else if($('#DeliveryAddress').val() == ''){
+		
+		$('.daddress').html('<p style="color:red">Enter Delivery Address</p>');
+	}else if($('#registerEmailField').val() == ''){
+		
+		$('.email').html('<p style="color:red">Enter Email</p>');
+	}else if ($('#registerPasswordField').val() == ''){
+		
+		$('.pwd').html('<p style="color:red">Enter Password</p>');
+	}else if($('#DeliverLocation').val() == ''){
+		alert();
+		
+		$('.pwd').html('<p style="color:red">Enter Password</p>');
+	}
+	else{
+	
+	
+	var firstname 		= $('#registerFirstNameField').val();
+	var phonenumber 	= $('#registerPhoneField').val();
+	var address 		= $('#registerAddressField').val();
+	var DeliveryAddress = $('#DeliveryAddress').val();
+	var DeliverLocation = $('#DeliverLocation').val();
+	var CityId 			= $('#DeliverLocation').val();
+	var user_email 		= $('#registerEmailField').val();
+	var Username 		= $('#registerPhoneField').val();
+	var password 		= $('#registerPasswordField').val();
+	
+	/* $.ajax({
+		
+		type:'post',
+		data:{'firstname':firstname,'Username':Username,'DeliveryAddress':DeliveryAddress,'DeliverLocation':DeliverLocation,
+			'CityId':CityId,'user_email':user_email,'password':password,'phonenumber':phonenumber,'address':address},
+		
+		url:"http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/save_users",
+		
+		success:function(response){
+			
+			
+			var result = jQuery.parseJSON(response);
+			
+			if(result == true){
+				
+				document.getElementById("prducts").click();
+				
+				alert('Successfully Registred !');
+			}else{
+				
+				$('#failed').html('<p style="color:red">Sorry! Registration Failed Please Try Again.</p>');
+			}
+			
+			
+			
+		}
+		
+	}); */
+		
+	}
+}
+
+
+
+</script>
+</body>
+
+
+</html>

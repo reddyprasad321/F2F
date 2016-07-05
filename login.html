@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Form2Fridge</title>
+<!-- meta tags start -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content=" premium, mobile, template, HTML, CSS" />
+<meta name="Description" content="Premium mobile HTML/CSS template." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- meta tags end -->
+
+<!-- favorite icon starts -->
+<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+<!-- favorite icon ends -->
+
+<!-- Google fonts start -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<!-- Google fonts end -->
+
+<!-- CSS files start -->
+<link href="css/framework.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/elements.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<!-- CSS files end -->
+
+<!-- JavaScript files start -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo-slider.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/mycart.js"></script>
+<!-- JavaScript files end -->
+</head>
+<body> 
+<!-- website wrapper starts -->
+<div class="websiteWrapper"> 
+  <!-- page wrapper starts -->
+  <div class="pageWrapper loginPageWrapper"> 
+    <!-- main menu outer wrapper starts -->
+    <div class="mainMenuOuterWrapper"> 
+      <!-- main menu wrapper starts -->
+       <ul class="mainMenuWrapper">
+        <li class="currentPage"><a href="index.html">Home</a></li>
+         <li><a href="myprofile.html" id='myprofile'>MyProfile</a></li>
+         <li><a href="register.html" id='register'>Register</a></li>
+         <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+      <!-- main menu wrapper ends -->
+      <div class="mainMenuBottomDecoration"></div>
+    </div>
+     <a href="index.html" id='index'></a>
+      <a href="checkout.html" id='checkout'></a>
+      <a href="categories.html" id='categories'></a>
+    <!-- main menu outer wrapper ends --> 
+    
+      <!-- shopping cart wrapper start -->
+    <form id="shoppingCartWrapper" class="shoppingCartWrapper "  action="checkout.html" method="post">
+      <fieldset>
+      <div class='ifProducts'>
+        <div class='mycart'></div>
+        
+        <!-- shopping cart info wrapper starts -->
+        <div class="shoppingCartInfoWrapper"> <span class="shoppingCartProductsNumber">Products:<span id='cartPCount'></span></span> <span class="shoppingCartProductsTotal">Total: Rs.<span id='cartTotalPrice'></span></span> </div>
+        <!-- shopping cart info wrapper ends -->
+        
+        <div class="shoppingCartButtonsWrapper"><a href="#" class="shoppingCartEmptyButton">Empty</a>
+          <input type="button" value="Checkout"  onClick='logincheck()' id="shoppingCartCheckoutButton" class="shoppingCartCheckoutButton"/>
+        </div>
+        </div>
+        
+        <div class='noProducts'>
+       <center>
+        <image src='images/content/empty-cart.png'>
+        <a href='categories.html' class='startShopping'>Start Shopping</a>
+          </center>
+        </div>
+      
+      </fieldset>
+    </form>
+
+    <!-- shopping cart wrapper ends -->
+    
+  <!-- header outer wrapper starts -->
+    
+    <!-- header outer wrapper ends --> 
+    
+    <!-- page content wrapper starts -->
+        
+      <!-- page title starts -->
+    
+      
+       
+      <!-- page title ends -->
+      
+      
+      <div >
+      <a class='skip' href='categories.html'>SKIP</a><img class='logo' alt='logo' src="images/logo4.png" /></div>
+       
+      <!-- login form wrapper starts -->
+      <div id='Unvalid'></div>
+       
+      
+            <div class="formFieldWrapper">
+             
+              <input type="text" value="" id="loginNameField" placeholder='Mobile Number'  class="fields " name="loginNameField" />
+            </div>
+           
+            <div class="formFieldWrapper">
+              
+              <input type="password" value="" id="loginPasswordField" placeholder='Password' class="fields" name="loginPasswordField" />
+            </div>
+            
+            
+             <div class="formFieldWrapper">
+             
+              <button type="text" value="" id="loginNameField"  value='Sign In' onclick='login()'  class="button-big" name="loginNameField" >Sign In</button>
+            </div>
+            <div style="margin:0 auto;display:table;width:80%">
+            <div style='width:50%;float:left'><img  alt='fb' style="margin:0 auto"  src='images/fbwithbg.png'></div>
+      		<div style='width:50%;float:right'> <img  alt='fb' style="margin:0 auto"  src='images/gplus.png'></div>
+               </div>
+           <!--    <button type="text" value="" id="loginNameField"  value='Sign In'  class="button-small" name="loginNameField" ><img alt="fb" style='margin:0px auto' src="images/fblogo1.png"></button>
+              <button type="text" value="" id="loginNameField"  value='Sign In'  class="button-small1" name="loginNameField" ><img alt="fb" style='margin:0px auto' src="images/gpluslogo.png"></button>
+         -->   
+        <div  class="signup col-md-12">
+        <br/>
+        <br/>
+     <span style='color:#969090'>Don't hava an account ?</span><span> <a href='register.html ' class='list' >Sign up</a></span></div>
+     <br/>
+      <div  class="signup"><a  href='recover.html' class='list'>Forgot Password</a> </div>
+       
+     
+     
+     
+       
+   
+      <a href='products.html' id='prducts'></a>
+      <!-- login form wrapper ends -->
+      
+    
+    <!-- page content wrapper ends -->
+    
+    
+    <!-- footer wrapper ends -->
+    
+  </div>
+  <!-- page wrapper ends --> 
+</div>
+<!-- website wrapper ends -->
+<style>
+html
+{
+height:100%;
+}
+body{
+
+  background:url("images/bg4.png") no-repeat center center fixed;
+  
+ background-size: 100% 100%;
+ 
+ 
+/*  background-color:rgb(146,218,146); */
+
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+<script>
+
+function getavail() {
+
+	var Uname = $('#loginNameField').val();
+	
+	
+	
+	if(Uname == '' || Uname.length !=10){
+		
+		document.getElementById("loginNameField").value = '';
+		$('#Unvalid').html('<p style="color:red">Please Provie Valid Mobile Number</p>');
+		
+	}
+
+	
+	$.ajax({
+
+				type : 'post',
+				data : {
+					'Username' : Uname
+				},
+				url : "http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/check_avail",
+				success : function(response) {
+
+					var status = jQuery.parseJSON(response);
+
+					if (status == 'Taken') {
+
+						document.getElementById("loginNameField").value = '';
+						$('#Unvalid').html('<p style="color:red"> Sorry! Mobile Number Already Exist Please select Another .');
+						
+					}
+
+				}
+			});
+
+}
+
+
+function login() {
+	var Uname='';
+	var pwd='';
+	
+	/* if($('#loginNameField').val() != '' && $('#loginPasswordField').val() != ''){ */
+		
+		 Uname = $('#loginNameField').val();
+		 pwd = $('#loginPasswordField').val();
+		 
+	/* }else if($('#username1').val() != '' && $('#password1').val() != ''){
+	
+		
+		Uname = $('#username1').val();
+		 pwd = $('#password1').val();
+	
+	} */
+
+	$.ajax({
+				type : 'post',
+				data : {
+					'Username' : Uname,
+					'Password' : pwd
+				},
+				url : "http://www.tutionshub.in/demo/API/index.php/Farm2Fridze/login",
+				error : function(jqXHR, exception, errorThrown) {
+
+					
+
+					var msg = '';
+					if (jqXHR.status === 0) {
+						msg = 'Not connect.\n Verify Network.';
+					} else if (jqXHR.status == 404) {
+						msg = 'Requested page not found. [404]';
+					} else if (jqXHR.status == 500) {
+						msg = 'Internal Server Error [500].';
+					} else if (exception === 'parsererror') {
+						msg = 'Requested JSON parse failed.';
+					} else if (exception === 'timeout') {
+						msg = 'Time out error.';
+					} else if (exception === 'abort') {
+						msg = 'Ajax request aborted.';
+					} else {
+						msg = 'Uncaught Error.\n' + jqXHR.responseText;
+					}
+					alert(msg);
+
+				},
+				success : function(response) {
+					if(response == 'failure'){
+						
+						
+						$('#Unvalid').html('<p style="color:#ea5113 ;text-align:center" > Please Enter Valid Username and Password! .');
+						
+						
+						document.getElementById("loginNameField").value = '';
+						document.getElementById("loginPasswordField").value = '';
+						
+					}else{
+					
+					if(window.localStorage.getItem('user_status') != null){
+						
+						
+						//document.getElementById("cart").click();
+						
+						var data = jQuery.parseJSON(response);
+						
+						window.localStorage.setItem("user_id",data['id']);
+						window.localStorage.setItem("firstname",data['firstname']);
+						window.localStorage.setItem("Username",data['Username']);
+						window.localStorage.setItem("DeliveryAddress",data['DeliveryAddress']);
+						window.localStorage.setItem("DeliverLocation",data['DeliverLocation']);
+						window.localStorage.setItem("CityId",data['CityId']);
+						window.localStorage.setItem("user_email",data['user_email']);
+						window.localStorage.setItem("phonenumber",data['phonenumber']);
+						window.localStorage.setItem("address",data['address']);
+						
+						//alert(window.localStorage.getItem("user_id"));
+						
+						if(window.localStorage.getItem('From') == 1){
+							
+							
+							document.getElementById("checkout").click();
+							
+						}else{
+							
+							document.getElementById("categories").click();
+						}
+						
+						
+						
+						
+					}
+					else{
+						
+						var data = jQuery.parseJSON(response);
+						
+						window.localStorage.setItem("user_id",data['id']);
+						window.localStorage.setItem("firstname",data['firstname']);
+						window.localStorage.setItem("Username",data['Username']);
+						window.localStorage.setItem("DeliveryAddress",data['DeliveryAddress']);
+						window.localStorage.setItem("DeliverLocation",data['DeliverLocation']);
+						window.localStorage.setItem("CityId",data['CityId']);
+						window.localStorage.setItem("user_email",data['user_email']);
+						window.localStorage.setItem("phonenumber",data['phonenumber']);
+						window.localStorage.setItem("address",data['address']);
+						//alert(window.localStorage.getItem("user_id"));
+						
+						
+						
+						if(window.localStorage.getItem('From') == 1){
+							
+							
+							document.getElementById("checkout").click();
+							
+						}else{
+							
+							document.getElementById("categories").click();
+						}
+						
+						
+					
+					}
+					
+				}
+					
+						
+				}
+			});
+}
+
+</script>
+</body>
+
+
+</html>
